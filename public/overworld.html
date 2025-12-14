@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Overworld | Minecraft: Worlds Beyond</title>
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #222;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            width: 40px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c1ff72;
+            text-decoration: underline;
+        }
+
+        /* OVERWORLD */
+        .overworld {
+            padding: 60px 80px;
+        }
+
+        .overworld-title {
+            font-family: monospace;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .overworld-desc {
+            border: 2px solid white;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        .biomes-title {
+            font-family: monospace;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* BIOMES GRID */
+        .biomes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .biome-card {
+            text-align: center;
+            color: #ccc;
+        }
+
+        /* IMAGE BOX */
+        .biome-img {
+            width: 100%;
+            height: 180px;
+            border: 2px solid white;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* BIOME IMAGES */
+        .forest {
+            background-image: url("../assets/forest.jpg");
+        }
+
+        .desert {
+            background-image: url("../assets/desert.jpg");
+        }
+
+        .plains {
+            background-image: url("../assets/plains.jpg");
+        }
+
+        .jungle {
+            background-image: url("../assets/jungle.jpg");
+        }
+
+        .biome-desc {
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+
+        .biome-includes {
+            font-size: 0.75rem;
+            margin-top: 10px;
+            color: #aaa;
+        }
+
+        .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="../assets/creeperlogo.png">
+        <h1>MINECRAFT: WORLDS BEYOND</h1>
+    </div>
+
+    <nav>
+    <a href="../index.html">HOME</a>
+
+    <div class="dropdown">
+        <a href="#">DIMENSIONS</a>
+        <div class="dropdown-content">
+            <a href="overworld.html">Overworld</a>
+            <a href="nether.html">Nether</a>
+            <a href="end.html">The End</a>
+        </div>
+    </div>
+
+    <a href="funfacts.html">FUN FACTS</a>
+</nav>
+
+</div>
+
+</header>
+
+<section class="overworld">
+
+    <h2 class="overworld-title">THE OVERWORLD:</h2>
+
+    <div class="overworld-desc">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+    </div>
+
+    <h3 class="biomes-title">BIOMES:</h3>
+
+    <div class="biomes-grid">
+
+        <div class="biome-card">
+            <div class="biome-img forest"></div>
+            <p class="biome-desc">Forest biome description</p>
+            <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
+        </div>
+
+        <div class="biome-card">
+            <div class="biome-img desert"></div>
+            <p class="biome-desc">Desert biome description</p>
+            <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
+        </div>
+
+        <div class="biome-card">
+            <div class="biome-img plains"></div>
+            <p class="biome-desc">Plains biome description</p>
+            <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
+        </div>
+
+        <div class="biome-card">
+            <div class="biome-img jungle"></div>
+            <p class="biome-desc">Jungle biome description</p>
+            <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

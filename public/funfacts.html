@@ -3,6 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Minecraft: Fun Facts</title>
+
+   <style>
+/* RESET JUST THE NAV LINKS */
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    display: inline-block; /* IMPORTANT */
+}
+
+/* HOVER — GUARANTEED */
+header nav a:hover {
+    color: #c1ff72;
+    text-decoration: underline;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    border-radius: 4px;
+    z-index: 999;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+    color: #c1ff72;
+}
+
+/* KEEP DIMENSIONS HIGHLIT */
+.dropdown:hover > a {
+    color: #c1ff72;
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+
 </head>
 <body style="background-color: #111; color: white; font-family: Arial, sans-serif; margin: 0; padding: 0;">
 
@@ -14,20 +71,23 @@
     </div>
     <nav>
         <a href="../index.html" style="color:white; font-weight:bold; text-decoration:none; margin-left:20px;">HOME</a>
-        <div style="display:inline-block; position: relative; margin-left:20px;">
-            <a href="#" style="color:white; font-weight:bold; text-decoration:none;">DIMENSIONS</a>
-            <div style="display:none; position:absolute; background-color:#222; top:100%; left:0; min-width:150px;">
-                <a href="../public/overworld.html" style="color:white; text-decoration:none; display:block; padding:5px 10px;">Overworld</a>
-                <a href="../public/nether.html" style="color:white; text-decoration:none; display:block; padding:5px 10px;">Nether</a>
-                <a href="../public/end.html" style="color:white; text-decoration:none; display:block; padding:5px 10px;">The End</a>
-            </div>
-        </div>
+        <div class="dropdown" style="margin-left:20px;">
+    <a href="#" style="color:white; font-weight:bold; text-decoration:none;">
+        DIMENSIONS
+    </a>
+
+    <div class="dropdown-content">
+        <a href="overworld.html">Overworld</a>
+        <a href="nether.html">Nether</a>
+        <a href="end.html">The End</a>
+    </div>
+</div>
         <a href="../public/funfacts.html" style="color:white; font-weight:bold; text-decoration:none; margin-left:20px;">FUN FACTS</a>
     </nav>
 </header>
 
 <!-- PAGE TITLE -->
-<h2 style="text-align:center; font-size:3rem; font-weight:bold; margin:60px 0;">Fun Facts</h2>
+<h2 style="text-align:center; font-size:3rem; font-weight:bold; margin:60px 0;">Fun Facts!!</h2>
 
 <!-- FUN FACTS SECTION -->
 <section style="max-width:1000px; margin:0 auto 100px auto; padding:0 20px; display:flex; flex-direction:column; gap:60px;">
