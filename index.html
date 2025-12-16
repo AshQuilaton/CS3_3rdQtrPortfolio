@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <title>Minecraft: Worlds Beyond</title>
@@ -16,12 +15,61 @@
             margin: 0;
             padding: 0;
         }
+
+        /* FOOTER */
+        .site-footer {
+            background-color: #222; /* same as navbar */
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Pixelify Sans', sans-serif;
+            margin-top: 80px;
+        }
+
+        .site-footer .footer-content p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .site-footer .social-links {
+            margin: 10px 0;
+        }
+
+        .site-footer .social-links a {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 12px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            gap: 6px; /* space between icon and name */
+        }
+
+        .site-footer .social-links a img {
+            width: 32px;
+            transition: transform 0.2s ease;
+        }
+
+        .site-footer .social-links a:hover img {
+            transform: scale(1.2);
+        }
+
+        .site-footer .social-links a:hover {
+            color: #7CFF5B;
+        }
+
+        .site-footer .footer-note a {
+            color: #7CFF5B;
+            text-decoration: none;
+        }
+
+        .site-footer .footer-note a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
-
 <body>
-
 
     <!-- HEADER -->
     <header class="navbar">
@@ -30,10 +78,8 @@
             <h1>MINECRAFT: WORLDS BEYOND</h1>
         </div>
 
-
         <nav>
             <a href="index.html">HOME</a>
-
 
             <div class="dropdown">
                 <a href="#">DIMENSIONS</a>
@@ -44,20 +90,16 @@
                 </div>
             </div>
 
-
             <a href="public/funfacts.html">FUN FACTS</a>
             <a href="public/sources.html">SOURCES</a>
         </nav>
     </header>
 
-
     <!-- TITLE -->
     <h2 class="main-title">PORTALS OPEN, ADVENTURES BEGIN</h2>
 
-
     <!-- DIMENSIONS -->
     <section class="dimensions">
-
 
         <div class="dimension-card">
             <img class="icon" src="assets/overworld.png" alt="Overworld Icon">
@@ -68,7 +110,6 @@
             <h3><a href="public/overworld.html">THE OVERWORLD</a></h3>
         </div>
 
-
         <div class="dimension-card">
             <img class="icon" src="assets/nether.png" alt="Nether Icon">
             <a href="public/nether.html">
@@ -77,7 +118,6 @@
             </a>
             <h3><a href="public/nether.html">THE NETHER</a></h3>
         </div>
-
 
         <div class="dimension-card">
             <img class="icon" src="assets/end.png" alt="End Icon">
@@ -88,9 +128,7 @@
             <h3><a href="public/end.html">THE END</a></h3>
         </div>
 
-
     </section>
-
 
     <!-- FUN FACTS BUTTON -->
     <section class="fun-facts-section">
@@ -101,11 +139,34 @@
         </a>
     </section>
 
-
     <!-- JS for hover portal images -->
     <script src="index.js"></script>
 
-</body>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 Exploring the Three Dimensions</p>
+            <div class="social-links">
+                <a href="https://twitter.com/i/status/1575161192141803520" target="_blank">
+                    <img src="../assets/x.png" alt="Minecraft X (Twitter)">X
+                </a>
+                <a href="https://www.youtube.com/minecraft" target="_blank">
+                    <img src="../assets/youtube.png" alt="Minecraft YouTube">YouTube
+                </a>
+                <a href="https://www.instagram.com/minecraft/" target="_blank">
+                    <img src="../assets/instagram.png" alt="Minecraft Instagram">Instagram
+                </a>
+                <a href="https://discord.com/invite/minecraft" target="_blank">
+                    <img src="../assets/discord.png" alt="Minecraft Discord">Discord
+                </a>
+            </div>
+            <p class="footer-note">
+                Source citations for images and info can be found on the
+                <a href="sources.html">Sources</a> page
+            </p>
+        </div>
+    </footer>
 
+</body>
 
 </html>

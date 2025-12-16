@@ -191,3 +191,54 @@ nav a:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* FOOTER */
+.site-footer {
+    background-color: #222; /* same as navbar */
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-top: 80px;
+}
+
+.site-footer .footer-content p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.site-footer .social-links {
+    margin: 10px 0;
+}
+
+.site-footer .social-links a {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 12px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    gap: 6px; /* space between icon and label */
+}
+
+.site-footer .social-links a img {
+    width: 32px;
+    transition: transform 0.2s ease;
+}
+
+.site-footer .social-links a:hover img {
+    transform: scale(1.2);
+}
+
+.site-footer .social-links a:hover {
+    color: #7CFF5B;
+}
+
+.site-footer .footer-note a {
+    color: #7CFF5B;
+    text-decoration: none;
+}
+
+.site-footer .footer-note a:hover {
+    text-decoration: underline;
+}
