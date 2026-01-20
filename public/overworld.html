@@ -259,54 +259,56 @@
         }
 
         .site-footer {
-    background-color: #222; /* same as navbar */
-    color: #ccc;
-    text-align: center;
-    padding: 20px 0;
-    font-family: 'Pixelify Sans', sans-serif;
-    margin-top: 80px;
-}
+            background-color: #222;
+            /* same as navbar */
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Pixelify Sans', sans-serif;
+            margin-top: 80px;
+        }
 
-.site-footer .footer-content p {
-    margin: 8px 0;
-    font-size: 0.9rem;
-}
+        .site-footer .footer-content p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
 
-.site-footer .social-links {
-    margin: 10px 0;
-}
+        .site-footer .social-links {
+            margin: 10px 0;
+        }
 
-.site-footer .social-links a {
-    display: inline-flex;
-    align-items: center;
-    margin: 0 12px;
-    color: #ccc;
-    text-decoration: none;
-    font-size: 0.9rem;
-    gap: 6px; /* space between icon and label */
-}
+        .site-footer .social-links a {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 12px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            gap: 6px;
+            /* space between icon and label */
+        }
 
-.site-footer .social-links a img {
-    width: 32px;
-    transition: transform 0.2s ease;
-}
+        .site-footer .social-links a img {
+            width: 32px;
+            transition: transform 0.2s ease;
+        }
 
-.site-footer .social-links a:hover img {
-    transform: scale(1.2);
-}
+        .site-footer .social-links a:hover img {
+            transform: scale(1.2);
+        }
 
-.site-footer .social-links a:hover {
-    color: #7CFF5B;
-}
+        .site-footer .social-links a:hover {
+            color: #7CFF5B;
+        }
 
-.site-footer .footer-note a {
-    color: #7CFF5B;
-    text-decoration: none;
-}
+        .site-footer .footer-note a {
+            color: #7CFF5B;
+            text-decoration: none;
+        }
 
-.site-footer .footer-note a:hover {
-    text-decoration: underline;
-}
+        .site-footer .footer-note a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -336,7 +338,13 @@
 
 
             <a href="funfacts.html">FUN FACTS</a>
-            <a href="sources.html">SOURCES</a>
+            <div class="dropdown">
+                <a href="Coordinates/savedcoords.html">COORDINATES</a>
+                <div class="dropdown-content">
+                    <a href="Coordinates/savedcoords.html">See Saved</a>
+                    <a href="fart">Create New</a>
+                </div>
+            </div> <a href="sources.html">SOURCES</a>
         </nav>
 
 
@@ -402,7 +410,8 @@
             <div class="biome-card">
                 <div class="biome-img savanna"></div>
                 <p class="biome-desc">Savanna</p>
-                <p class="biome-desc">A <u>Savanna</u> is a large flat area that can grow acacia trees and tall grass. It is often considered a dry and warm biome.</p>
+                <p class="biome-desc">A <u>Savanna</u> is a large flat area that can grow acacia trees and tall grass.
+                    It is often considered a dry and warm biome.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : Villages, Pillager Outposts</p>
                 <p class="biome-includes">Resources : Acacia Wood, Dirt</p>
@@ -415,7 +424,8 @@
             <div class="biome-card">
                 <div class="biome-img oakforest"></div>
                 <p class="biome-desc">Oak Forests</p>
-                <p class="biome-desc"><u>Oak Forests</u> are areas filled with oak trees and may occasionally include birch trees, flowers, or mushrooms.</p>
+                <p class="biome-desc"><u>Oak Forests</u> are areas filled with oak trees and may occasionally include
+                    birch trees, flowers, or mushrooms.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : Villages, Pillager Outposts</p>
                 <p class="biome-includes">Resources : Oak Wood, Flowers, Dirt</p>
@@ -426,7 +436,8 @@
             <div class="biome-card">
                 <div class="biome-img birchforest"></div>
                 <p class="biome-desc">Birch Forests</p>
-                <p class="biome-desc"><u>Birch Forests</u> are areas filled with birch trees and may contain flowers and mushrooms.</p>
+                <p class="biome-desc"><u>Birch Forests</u> are areas filled with birch trees and may contain flowers and
+                    mushrooms.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : Villages, Pillager Outposts</p>
                 <p class="biome-includes">Resources : Birch Wood, Flowers, Dirt</p>
@@ -438,7 +449,8 @@
             <div class="biome-card">
                 <div class="biome-img darkforest"></div>
                 <p class="biome-desc">Dark Forests</p>
-                <p class="biome-desc"><u>Dark Forests</u> are dense forests with large dark oak trees that block light, making them more dangerous.</p>
+                <p class="biome-desc"><u>Dark Forests</u> are dense forests with large dark oak trees that block light,
+                    making them more dangerous.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : Woodland Mansions</p>
                 <p class="biome-includes">Resources : Dark Oak Wood, Mushrooms</p>
@@ -449,7 +461,8 @@
             <div class="biome-card">
                 <div class="biome-img taiga"></div>
                 <p class="biome-desc">Taiga</p>
-                <p class="biome-desc"><u>Taigas</u> are filled with spruce trees, ferns, and bushes, with variants that include podzol and mossy cobblestone.</p>
+                <p class="biome-desc"><u>Taigas</u> are filled with spruce trees, ferns, and bushes, with variants that
+                    include podzol and mossy cobblestone.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : Villages, Pillager Outposts</p>
                 <p class="biome-includes">Resources : Spruce Wood, Berries, Podzol</p>
@@ -471,7 +484,8 @@
             <div class="biome-card">
                 <div class="biome-img cherrygrove"></div>
                 <p class="biome-desc">Cherry Grove</p>
-                <p class="biome-desc"><u>Cherry Groves</u> are decorative biomes filled with pink cherry trees and petals.</p>
+                <p class="biome-desc"><u>Cherry Groves</u> are decorative biomes filled with pink cherry trees and
+                    petals.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : None</p>
                 <p class="biome-includes">Resources : Cherry Wood, Petals</p>
@@ -482,7 +496,8 @@
             <div class="biome-card">
                 <div class="biome-img palegarden"></div>
                 <p class="biome-desc">Pale Gardens</p>
-                <p class="biome-desc"><u>Pale Gardens</u> are eerie forests with pale oak trees and moss-covered ground.</p>
+                <p class="biome-desc"><u>Pale Gardens</u> are eerie forests with pale oak trees and moss-covered ground.
+                </p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : None</p>
                 <p class="biome-includes">Resources : Pale Oak Wood, Pale Moss</p>
@@ -493,7 +508,8 @@
             <div class="biome-card">
                 <div class="biome-img deepdark"></div>
                 <p class="biome-desc">Deep Dark</p>
-                <p class="biome-desc"><u>Deep Dark</u> biomes are deep underground areas covered in sculk and are the only place where Ancient Cities and the Warden can appear.</p>
+                <p class="biome-desc"><u>Deep Dark</u> biomes are deep underground areas covered in sculk and are the
+                    only place where Ancient Cities and the Warden can appear.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : Ancient Cities</p>
                 <p class="biome-includes">Resources : Sculk, Echo Shards</p>
@@ -504,7 +520,8 @@
             <div class="biome-card">
                 <div class="biome-img lushcaves"></div>
                 <p class="biome-desc">Lush Caves</p>
-                <p class="biome-desc"><u>Lush Caves</u> are vibrant caves filled with moss, glow berries, and dripleaves.</p>
+                <p class="biome-desc"><u>Lush Caves</u> are vibrant caves filled with moss, glow berries, and
+                    dripleaves.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : None</p>
                 <p class="biome-includes">Resources : Moss, Glow Berries, Clay</p>
@@ -515,7 +532,8 @@
             <div class="biome-card">
                 <div class="biome-img dripstone"></div>
                 <p class="biome-desc">Dripstone Caves</p>
-                <p class="biome-desc"><u>Dripstone Caves</u> are large caves filled with sharp stalactites and stalagmites.</p>
+                <p class="biome-desc"><u>Dripstone Caves</u> are large caves filled with sharp stalactites and
+                    stalagmites.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : None</p>
                 <p class="biome-includes">Resources : Dripstone, Calcite</p>
@@ -537,7 +555,8 @@
             <div class="biome-card">
                 <div class="biome-img mangroveswamp"></div>
                 <p class="biome-desc">Mangrove Swamp</p>
-                <p class="biome-desc"><u>Mangrove Swamps</u> are water-filled swamps with large mangrove trees and mud blocks.</p>
+                <p class="biome-desc"><u>Mangrove Swamps</u> are water-filled swamps with large mangrove trees and mud
+                    blocks.</p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : None</p>
                 <p class="biome-includes">Resources : Mangrove Wood, Mud</p>
@@ -603,7 +622,8 @@
             <div class="biome-card">
                 <div class="biome-img mushroomisland"></div>
                 <p class="biome-desc">Mushroom Fields</p>
-                <p class="biome-desc"><u>Mushroom Fields</u> are rare islands covered in mycelium and giant mushrooms.</p>
+                <p class="biome-desc"><u>Mushroom Fields</u> are rare islands covered in mycelium and giant mushrooms.
+                </p>
                 <p class="biome-includes">– STRUCTURES • RESOURCES • MOBS –</p>
                 <p class="biome-includes">Structures : None</p>
                 <p class="biome-includes">Resources : Mycelium, Mushrooms</p>
@@ -613,7 +633,7 @@
 
         </div>
     </section>
- <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-content">
             <p>© 2025 Exploring the Three Dimensions</p>
@@ -636,7 +656,7 @@
                 <a href="./sources.html">Sources</a> page
             </p>
             <p style="margin-top:10px; font-size:0.9rem; color:#7CFF5B;">Project by A. Katigbac and A. Quilaton</p>
-    </div>
+        </div>
         </div>
     </footer>
 
