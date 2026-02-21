@@ -16,6 +16,16 @@
             padding: 0;
         }
 
+        h2 {
+            color: #ffffff;
+        }
+
+        h4 {
+            text-align: center;
+            color: rgb(155, 78, 231);
+            margin-top: -35px;   /* moves it higher (adjust value) */
+            margin-bottom: 70px; /* pushes portals further down */
+        }
         /* FOOTER */
         .site-footer {
             background-color: #222; /* same as navbar */
@@ -84,24 +94,26 @@
             <div class="dropdown">
                 <a href="#">DIMENSIONS</a>
                 <div class="dropdown-content">
-                    <a href="../public/overworld.html">Overworld</a>
-                    <a href="../public/nether.html">Nether</a>
-                    <a href="../public/end.html">The End</a>
+                    <a href="public/overworld.html">Overworld</a>
+                    <a href="public/nether.html">Nether</a>
+                    <a href="public/end.html">The End</a>
                 </div>
             </div>
 
-            <a href="../public/funfacts.html">FUN FACTS</a>
-            <a href="../public/coords.html">COORDINATES</a>
-            <a href="../public/sources.html">SOURCES</a>
+            <a href="public/funfacts.html">FUN FACTS</a>
+            <a href="public/coords.html">COORDINATES</a>
+            <a href="public/sources.html">SOURCES</a>
         </nav>
     </header>
 
     <!-- TITLE -->
-    <h2 class="main-title">PORTALS OPEN, ADVENTURES BEGIN</h2>
+    <h2 style="text-align:center; font-size:3rem; font-weight:bold; margin:60px 0;">SAVED COORDINATES OF<br>STRUCTURES AND BIOMES</h2>
+    <h4>Click on the portals to view coordinate cards!</h4>
+
+
 
     <!-- DIMENSIONS -->
     <section class="dimensions">
-
         <div class="dimension-card">
             <img class="icon" src="assets/overworld.png" alt="Overworld Icon">
             <a href="public/overworld.html">
@@ -129,15 +141,6 @@
             <h3><a href="public/end.html">THE END</a></h3>
         </div>
 
-    </section>
-
-    <!-- FUN FACTS BUTTON -->
-    <section class="fun-facts-section">
-        <a href="public/funfacts.html" class="fun-facts-button">
-            <img src="assets/book.png" alt="Book Icon" class="book-icon">
-            FUN FACTS
-            <img src="assets/book.png" alt="Book Icon" class="book-icon">
-        </a>
     </section>
 
     <!-- JS for hover portal images -->
