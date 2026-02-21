@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Minecraft: Worlds Beyond</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Pixelify Sans' rel='stylesheet'>
+    <style>
+        body {
+            background-color: #111;
+            color: #7CFF5B;
+            font-family: 'Pixelify Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        h4 {
+            text-align: center;
+            color: rgb(155, 78, 231);
+            margin-top: -35px;   /* moves it higher (adjust value) */
+            margin-bottom: 70px; /* pushes portals further down */
+        }
+        /* FOOTER */
+        .site-footer {
+            background-color: #222; /* same as navbar */
+            color: #ccc;
+            text-align: center;
+            padding: 20px 0;
+            font-family: 'Pixelify Sans', sans-serif;
+            margin-top: 80px;
+        }
+
+        .site-footer .footer-content p {
+            margin: 8px 0;
+            font-size: 0.9rem;
+        }
+
+        .site-footer .social-links {
+            margin: 10px 0;
+        }
+
+        .site-footer .social-links a {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 12px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            gap: 6px; /* space between icon and name */
+        }
+
+        .site-footer .social-links a img {
+            width: 32px;
+            transition: transform 0.2s ease;
+        }
+
+        .site-footer .social-links a:hover img {
+            transform: scale(1.2);
+        }
+
+        .site-footer .social-links a:hover {
+            color: #7CFF5B;
+        }
+
+        .site-footer .footer-note a {
+            color: #7CFF5B;
+            text-decoration: none;
+        }
+
+        .site-footer .footer-note a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/creeperlogo.png" alt="Creeper Logo">
+            <h1>MINECRAFT: WORLDS BEYOND</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">HOME</a>
+
+            <div class="dropdown">
+                <a href="#">DIMENSIONS</a>
+                <div class="dropdown-content">
+                    <a href="public/overworld.html">Overworld</a>
+                    <a href="public/nether.html">Nether</a>
+                    <a href="public/end.html">The End</a>
+                </div>
+            </div>
+
+            <a href="public/funfacts.html">FUN FACTS</a>
+            <a href="../coords.html">COORDINATES</a>
+            <a href="public/sources.html">SOURCES</a>
+        </nav>
+    </header>
+
+
+    <!-- ================= COORDINATE FORM ================= -->
+        <section class="coord-container">
+
+            <div class="coord-header">
+                <a href="endsaved.html" class="see-saved-btn">SEE SAVED</a>
+                <button onclick="clearForm()">RESTART</button>
+            </div>
+
+            <form id="coordForm" style="max-width:700px; margin:40px auto; display:flex; flex-direction:column; gap:15px;">
+        <label>Username:</label>
+        <input type="text" id="username" placeholder="Enter username">
+
+        <label>Title:</label>
+        <input type="text" id="title" placeholder="Structure Title">
+
+        <label>Dimension:</label>
+        <input type="text" id="dimension" placeholder="Overworld / Nether / End">
+
+        <label>Type:</label>
+        <input type="text" id="type" placeholder="Survival / Creative / Other">
+
+        <label>Which:</label>
+        <input type="text" id="which" placeholder="House / Farm / Castle">
+
+        <label>Coordinates:</label>
+        <input type="text" id="coords" placeholder="X,Y,Z">
+
+        <label>Picture:</label>
+        <input type="file" id="image" accept="image/*">
+
+        <div style="display:flex; justify-content: space-between; align-items:center; margin-top:10px;">
+            <button type="submit" class="save">Save</button>
+            <button type="button" id="resetBtn">Restart</button>
+        </div>
+        </form>
+            <!-- SAVED LIST -->
+            <div id="savedList"></div>
+
+                <script src="../index.js"></script>
+
+</section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© 2025 Exploring the Three Dimensions</p>
+            <div class="social-links">
+                <a href="https://twitter.com/i/status/1575161192141803520" target="_blank">
+                    <img src="../assets/x.png" alt="Minecraft X (Twitter)">X
+                </a>
+                <a href="https://www.youtube.com/minecraft" target="_blank">
+                    <img src="../assets/youtube.png" alt="Minecraft YouTube">YouTube
+                </a>
+                <a href="https://www.instagram.com/minecraft/" target="_blank">
+                    <img src="../assets/instagram.png" alt="Minecraft Instagram">Instagram
+                </a>
+                <a href="https://discord.com/invite/minecraft" target="_blank">
+                    <img src="../assets/discord.png" alt="Minecraft Discord">Discord
+                </a>
+            </div>
+            <p class="footer-note">
+                Source citations for images and info can be found on the
+                <a href="./public/sources.html">Sources</a> page
+            </p>
+            <p style="margin-top:10px; font-size:0.9rem; color:#7CFF5B;">Project by A. Katigbac and A. Quilaton</p>
+    </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

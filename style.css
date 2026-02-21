@@ -242,3 +242,343 @@ nav a:hover {
 .site-footer .footer-note a:hover {
     text-decoration: underline;
 }
+
+/* ================= COORD FORM ================= */
+
+.see-saved-btn {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.see-saved-btn:hover {
+    text-decoration: underline;
+}
+
+.coord-container {
+    width: 85%;
+    margin: 60px auto;
+    border: 3px solid white;
+    padding: 40px;
+    color: white;
+}
+
+.coord-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.coord-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Pixelify Sans';
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.coord-header button:hover {
+    text-decoration: underline;
+}
+
+.form-row {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-row input,
+.form-row select {
+    background: #111;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+    width: 300px;
+}
+
+.form-section-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.dimension-select {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.coord-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.coord-inputs input {
+    width: 150px;
+    background: #111;
+    border: 2px solid white;
+    color: white;
+    padding: 10px;
+}
+
+.save-btn {
+    display: block;
+    margin: 40px auto;
+    padding: 15px 30px;
+    font-family: 'Pixelify Sans';
+    background: #7CFF5B;
+    border: none;
+    cursor: pointer;
+}
+
+.save-btn:hover {
+    background: #5dd63f;
+}
+
+#savedList {
+    margin-top: 30px;
+}
+
+/* ==================== SAVED COORDS PAGE CARDS ================= */
+/* TITLE */
+.saved-title{
+    text-align:center;
+    font-size:3rem;
+    margin:60px 0;
+}
+
+/* GRID LAYOUT */
+.saved-grid{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+}
+
+/* FULL CARD BOX */
+.saved-card{
+    border:3px solid white;
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background:#181818;
+    transition:0.25s ease;
+}
+
+/* card zoom */
+.saved-card:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 15px #7CFF5B;
+}
+
+/* LEFT SIDE (image container) */
+.card-left{
+    width:45%;
+    border:3px solid white;
+    height:150px;
+    position:relative;
+}
+
+/* placeholder X lines */
+.card-left::before,
+.card-left::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:white;
+    top:50%;
+    left:0;
+}
+
+.card-left::before{
+    transform:rotate(25deg);
+}
+.card-left::after{
+    transform:rotate(-25deg);
+}
+
+/* RIGHT SIDE INFO */
+.card-right{
+    width:50%;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:4px;
+}
+
+.card-right div{
+    font-size:0.95rem;
+}
+
+/* coordinates default (one line) */
+.coords-inline{
+    display:block;
+}
+
+/* stacked coordinates hidden */
+.coords-expanded{
+    display:none;
+}
+
+/* ON HOVER → swap coordinate display */
+.saved-card:hover .coords-inline{
+    display:none;
+}
+
+.saved-card:hover .coords-expanded{
+    display:block;
+    font-size:1.2rem;
+    line-height:1.7;
+}
+
+/* back button */
+.back-btn{
+    color:white;
+    text-decoration:none;
+}
+
+.saved-card {
+  display: flex;
+  border: 3px solid white;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 650px;
+  margin: 20px auto;
+  background: #111;
+}
+
+.card-image { width: 50%; }
+.card-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.card-info {
+  width: 50%;
+  padding: 15px 20px;
+  text-align: left;  /* LEFT justified */
+  color: white;
+}
+
+.card-info p {
+  margin: 4px 0; /* smaller spacing between lines */
+}
+
+.username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.coords-expanded { display: none; font-size: 16px; }
+
+.coords:hover .coords-default { display: none; }
+.coords:hover .coords-expanded { display: block; }
+
+/* ---------- FORM STYLING ---------- */
+#coordForm {
+  max-width: 700px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#coordForm label {
+  font-weight: bold;
+  text-align: left;
+}
+
+#coordForm input[type="text"],
+#coordForm input[type="file"] {
+  padding: 8px;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1rem;
+}
+
+#coordForm div.buttons {
+  display: flex;
+  justify-content: space-between; /* restart button on right */
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* ---------- SAVED CARDS ---------- */
+#savedCards {
+  margin-top: 30px;
+}
+
+.saved-card {
+  display: flex;
+  border: 3px solid white;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 650px;
+  margin: 20px auto;
+  background: #111;
+  transition: transform 0.3s ease;
+}
+
+.saved-card:hover {
+  transform: scale(1.02);
+}
+
+.card-image {
+  width: 50%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  width: 50%;
+  padding: 15px 20px;
+  text-align: left;  /* LEFT justified */
+  color: white;
+}
+
+.card-info p {
+  margin: 4px 0; /* smaller spacing */
+}
+
+.username {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ---------- COORDINATES HOVER ---------- */
+.coords-expanded {
+  display: none;
+  font-size: 16px;
+}
+
+.coords:hover .coords-default {
+  display: none;
+}
+
+.coords:hover .coords-expanded {
+  display: block;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  align-self: flex-start;
+  padding: 5px 10px;
+  background-color: #c049c1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.05);
+  background-color: #ff5c8d;
+}
