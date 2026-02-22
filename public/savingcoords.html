@@ -23,12 +23,16 @@
         h4 {
             text-align: center;
             color: rgb(155, 78, 231);
-            margin-top: -35px;   /* moves it higher (adjust value) */
-            margin-bottom: 70px; /* pushes portals further down */
+            margin-top: -35px;
+            /* moves it higher (adjust value) */
+            margin-bottom: 70px;
+            /* pushes portals further down */
         }
+
         /* FOOTER */
         .site-footer {
-            background-color: #222; /* same as navbar */
+            background-color: #222;
+            /* same as navbar */
             color: #ccc;
             text-align: center;
             padding: 20px 0;
@@ -52,7 +56,8 @@
             color: #ccc;
             text-decoration: none;
             font-size: 0.9rem;
-            gap: 6px; /* space between icon and name */
+            gap: 6px;
+            /* space between icon and name */
         }
 
         .site-footer .social-links a img {
@@ -84,7 +89,7 @@
     <!-- HEADER -->
     <header class="navbar">
         <div class="logo">
-            <img src="assets/creeperlogo.png" alt="Creeper Logo">
+            <img src="../assets/creeperlogo.png" alt="Creeper Logo">
             <h1>MINECRAFT: WORLDS BEYOND</h1>
         </div>
 
@@ -94,60 +99,60 @@
             <div class="dropdown">
                 <a href="#">DIMENSIONS</a>
                 <div class="dropdown-content">
-                    <a href="public/overworld.html">Overworld</a>
-                    <a href="public/nether.html">Nether</a>
-                    <a href="public/end.html">The End</a>
+                    <a href="overworld.html">Overworld</a>
+                    <a href="nether.html">Nether</a>
+                    <a href="end.html">The End</a>
                 </div>
             </div>
 
-            <a href="public/funfacts.html">FUN FACTS</a>
+            <a href="funfacts.html">FUN FACTS</a>
             <a href="../coords.html">COORDINATES</a>
-            <a href="public/sources.html">SOURCES</a>
+            <a href="sources.html">SOURCES</a>
         </nav>
     </header>
 
 
     <!-- ================= COORDINATE FORM ================= -->
-        <section class="coord-container">
+    <section class="coord-container">
 
-            <div class="coord-header">
-                <a href="nethersaved.html" class="see-saved-btn">SEE SAVED</a>
-                <button onclick="clearForm()">RESTART</button>
-            </div>
-
-            <form id="coordForm" style="max-width:700px; margin:40px auto; display:flex; flex-direction:column; gap:15px;">
-        <label>Username:</label>
-        <input type="text" id="username" placeholder="Enter username">
-
-        <label>Title:</label>
-        <input type="text" id="title" placeholder="Structure Title">
-
-        <label>Dimension:</label>
-        <input type="text" id="dimension" placeholder="Overworld / Nether / End">
-
-        <label>Type:</label>
-        <input type="text" id="type" placeholder="Survival / Creative / Other">
-
-        <label>Which:</label>
-        <input type="text" id="which" placeholder="House / Farm / Castle">
-
-        <label>Coordinates:</label>
-        <input type="text" id="coords" placeholder="X,Y,Z">
-
-        <label>Picture:</label>
-        <input type="file" id="image" accept="image/*">
-
-        <div style="display:flex; justify-content: space-between; align-items:center; margin-top:10px;">
-            <button type="submit" class="save">Save</button>
-            <button type="button" id="resetBtn">Restart</button>
+        <div class="coord-header">
+            <a href="savedcoords.html" class="see-saved-btn">SEE SAVED</a>
+            <button onclick="clearForm()">RESTART</button>
         </div>
+
+        <form id="coordForm" style="max-width:700px; margin:40px auto; display:flex; flex-direction:column; gap:15px;">
+            <label>Username:</label>
+            <input type="text" id="username" placeholder="Enter username">
+
+            <label>Title:</label>
+            <input type="text" id="title" placeholder="Structure Title">
+
+            <label>Dimension:</label>
+            <input type="text" id="dimension" placeholder="Overworld / Nether / End">
+
+            <label>Type:</label>
+            <input type="text" id="type" placeholder="Survival / Creative / Other">
+
+            <label>Which:</label>
+            <input type="text" id="which" placeholder="House / Farm / Castle">
+
+            <label>Coordinates:</label>
+            <input type="text" id="coords" placeholder="X,Y,Z">
+
+            <label>Picture:</label>
+            <input type="file" id="image" accept="image/*">
+
+            <div style="display:flex; justify-content: space-between; align-items:center; margin-top:10px;">
+                <button type="submit" class="save">Save</button>
+                <button type="button" id="resetBtn">Restart</button>
+            </div>
         </form>
-            <!-- SAVED LIST -->
-            <div id="savedList"></div>
+        <!-- SAVED LIST -->
+        <div id="savedList"></div>
 
-                <script src="../index.js"></script>
+        <script src="../index.js"></script>
 
-</section>
+    </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">
@@ -172,7 +177,7 @@
                 <a href="./public/sources.html">Sources</a> page
             </p>
             <p style="margin-top:10px; font-size:0.9rem; color:#7CFF5B;">Project by A. Katigbac and A. Quilaton</p>
-    </div>
+        </div>
         </div>
     </footer>
 

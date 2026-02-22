@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Saved Coordinates</title>
+  <link rel="stylesheet" href="../style.css">
+  <link href='https://fonts.googleapis.com/css?family=Pixelify Sans' rel='stylesheet'>
+
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: 'Pixelify Sans', sans-serif;
+      text-align: center;
+    }
+
+    .saved-container {
+      width: 80%;
+      margin: 60px auto;
+      border: 3px solid white;
+      padding: 40px;
+    }
+
+    .saved-entry {
+      border-bottom: 1px solid #555;
+      padding: 15px 0;
+    }
+
+    .back-btn {
+      color: #7CFF5B;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border: 2px solid #7CFF5B;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      /* ensures link behaves like a button */
+      pointer-events: auto;
+      /* ensures it’s clickable */
+      cursor: pointer;
+      /* shows pointer on hover */
+    }
+
+    .back-btn:hover {
+      color: rgb(155, 78, 231);
+      border-color: rgb(155, 78, 231);
+      text-decoration: underline;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<header
+  style="display: flex; justify-content: space-between; align-items: center; background-color: #222; padding: 15px 30px;">
+  <div style="display: flex; align-items: center;">
+    <img src="../assets/creeperlogo.png" alt="Creeper Logo" style="height: 50px;">
+    <h1 style="color: #BFE57F; margin-left: 10px;">MINECRAFT: WORLDS BEYOND</h1>
+  </div>
+  <nav>
+    <a href="../index.html">HOME</a>
+
+
+    <div class="dropdown">
+      <a href="#">DIMENSIONS</a>
+      <div class="dropdown-content">
+        <a href="overworld.html">Overworld</a>
+        <a href="nether.html">Nether</a>
+        <a href="end.html">The End</a>
+      </div>
+    </div>
+
+
+    <a href="../public/funfacts.html">FUN FACTS</a>
+    <a href="../coords.html">COORDINATES</a>
+    <a href="../public/sources.html">SOURCES</a>
+  </nav>
+</header>
+<h2 class="saved-title">
+  SAVED COORDINATES OF<br>STRUCTURES AND BIOMES
+</h2>
+
+<div class="saved-grid" id="savedContainer"></div>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const savedContainer = document.getElementById("savedContainer");
+
+    function renderCards() {
+      savedContainer.innerHTML = ""; // clear existing cards
+      const savedCoords = JSON.parse(localStorage.getItem("coordsData")) || [];
+
+      savedCoords.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.classList.add("saved-card");
+        card.innerHTML = `
+        <div class="card-image">
+          <img src="${item.imgSrc}" alt="Structure Image">
+        </div>
+        <div class="card-info">
+          <p><strong>User:</strong> ${item.username}</p>
+          <p><strong>Title:</strong> ${item.title}</p>
+          <p><strong>Dimension:</strong> ${item.dimension}</p>
+          <p><strong>Type:</strong> ${item.type}</p>
+          <p><strong>Which:</strong> ${item.which}</p>
+          <p class="coords">
+            <span class="coords-default">${item.coords}</span>
+            <div class="coords-expanded">
+            ${item.coords.split(',').map((c, i) => {
+          const label = ['X', 'Y', 'Z'][i] || '';
+          return `<p>${label}: ${c.trim()}</p>`;
+        }).join('')}
+            </div>
+          </p>
+          <button class="delete-btn" data-index="${index}">Delete</button>
+        </div>
+      `;
+        savedContainer.appendChild(card);
+      });
+
+      // attach delete event
+      const deleteButtons = document.querySelectorAll(".delete-btn");
+      deleteButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          const idx = e.target.dataset.index;
+          let savedCoords = JSON.parse(localStorage.getItem("coordsData")) || [];
+          savedCoords.splice(idx, 1); // remove from array
+          localStorage.setItem("coordsData", JSON.stringify(savedCoords));
+          renderCards(); // re-render cards
+        });
+      });
+    }
+
+    renderCards(); // initial render
+  });
+</script>
+
+<a href="savingcoords.html" class="back-btn">Start Saving</a>
+<script src="../saved.js"></script>
+<p></p>
+<a href="../coords.html" class="back-btn">Back</a>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Exploring the Three Dimensions</p>
+    <div class="social-links">
+      <a href="https://twitter.com/i/status/1575161192141803520" target="_blank">
+        <img src="../assets/x.png" alt="Minecraft X (Twitter)">
+        X
+      </a>
+      <a href="https://www.youtube.com/minecraft" target="_blank">
+        <img src="../assets/youtube.png" alt="Minecraft YouTube">
+        YouTube
+      </a>
+      <a href="https://www.instagram.com/minecraft/" target="_blank">
+        <img src="../assets/instagram.png" alt="Minecraft Instagram">
+        Instagram
+      </a>
+      <a href="https://discord.com/invite/minecraft" target="_blank">
+        <img src="../assets/discord.png" alt="Minecraft Discord">
+        Discord
+      </a>
+    </div>
+    <p class="footer-note">
+      Source citations for images and info can be found on the
+      <a href="./sources.html">Sources</a> page
+    </p>
+    <p style="margin-top:10px; font-size:0.9rem; color:#7CFF5B;">Project by A. Katigbac and A. Quilaton</p>
+  </div>
+  </div>
+</footer>
+
+</html>
