@@ -49,7 +49,8 @@ Explore biomes, buildings, mobs, and materials from each dimension while learnin
 
 ### 💡 Content Page 1 - Fun Facts
 ![Fun Facts Wireframe](./images/FunFacts.png)
-
+### Coordinates Page - Saving coordinates
+![Wait lang ah]()
 ---
 
 ## Footer
