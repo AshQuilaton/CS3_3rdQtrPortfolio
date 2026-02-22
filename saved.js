@@ -3,7 +3,7 @@ const container = document.getElementById("savedContainer");
 
 let saved = JSON.parse(localStorage.getItem("minecraftCoords")) || [];
 
-if(saved.length === 0){
+if (saved.length === 0) {
     container.innerHTML = "<p>No saved coordinates yet.</p>";
 }
 
@@ -23,8 +23,7 @@ saved.forEach(item => {
             <div>${item.username || "user"}</div>
             <div>${item.title}</div>
             <div>${item.dimension}</div>
-            <div>${item.type}</div>
-            <div>${item.which}</div>
+            <div>${item.description}</div>
 
             <!-- default inline coordinates -->
             <div class="coords-inline">
@@ -34,9 +33,9 @@ saved.forEach(item => {
             <!-- expanded on hover -->
             <div class="coords-expanded">
         ${item.coords.split(',').map((c, i) => {
-            const label = ['X','Y','Z'][i] || '';
-            return `<p>${label}: ${c.trim()}</p>`;
-        }).join('')}
+        const label = ['X', 'Y', 'Z'][i] || '';
+        return `<p>${label}: ${c.trim()}</p>`;
+    }).join('')}
         </div>
         </div>
     `;
@@ -48,28 +47,27 @@ saved.forEach(item => {
 
 const coordForm = document.getElementById("coordForm");
 
-coordForm.addEventListener("submit", function(event) {
+coordForm.addEventListener("submit", function (event) {
     event.preventDefault(); // prevent page reload
 
     // Grab form values
     const username = document.getElementById("username").value;
     const title = document.getElementById("title").value;
     const dimension = document.getElementById("dimension").value;
-    const type = document.getElementById("type").value;
-    const which = document.getElementById("which").value;
+    const description = document.getElementById("description").value;
     const coords = document.getElementById("coords").value;
     const imageInput = document.getElementById("image");
 
     // Convert image to base64 so we can store it
     const reader = new FileReader();
-    reader.onload = function() {
+    reader.onload = function () {
         const imgSrc = reader.result;
 
         // Get previous saved data
         const savedData = JSON.parse(localStorage.getItem("coordsData")) || [];
 
         // Add new entry
-        savedData.push({ username, title, dimension, type, which, coords, imgSrc });
+        savedData.push({ username, title, dimension, description, coords, imgSrc });
 
         // Save back to localStorage
         localStorage.setItem("coordsData", JSON.stringify(savedData));
@@ -79,8 +77,7 @@ coordForm.addEventListener("submit", function(event) {
         // Optional: clear form except username
         document.getElementById("title").value = "";
         document.getElementById("dimension").value = "";
-        document.getElementById("type").value = "";
-        document.getElementById("which").value = "";
+        document.getElementById("description").value = "";
         document.getElementById("coords").value = "";
         document.getElementById("image").value = "";
     };
@@ -91,15 +88,14 @@ coordForm.addEventListener("submit", function(event) {
         // If no image, save anyway with placeholder
         const imgSrc = "assets/placeholder.png"; // optional default image
         const savedData = JSON.parse(localStorage.getItem("coordsData")) || [];
-        savedData.push({ username, title, dimension, type, which, coords, imgSrc });
+        savedData.push({ username, title, dimension, description, coords, imgSrc });
         localStorage.setItem("coordsData", JSON.stringify(savedData));
         alert("Your info was saved! ✅");
 
         // Clear form except username
         document.getElementById("title").value = "";
         document.getElementById("dimension").value = "";
-        document.getElementById("type").value = "";
-        document.getElementById("which").value = "";
+        document.getElementById("description").value = "";
         document.getElementById("coords").value = "";
     }
 });

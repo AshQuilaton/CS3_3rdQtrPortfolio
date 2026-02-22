@@ -15,7 +15,7 @@ Explore biomes, buildings, mobs, and materials from each dimension while learnin
 
 
 
-## Website Outline (5 Pages)
+## Website Outline (8 Pages)
 
 | **Page #** | **Subtitle**      | **Content** |
 |------------|----------|------------------------|
@@ -24,6 +24,9 @@ Explore biomes, buildings, mobs, and materials from each dimension while learnin
 |3 | **Nether**     | Biomes (Crimson Forest, Soul Sand Valley), Fortresses, Bastions, Hostile mobs, Lava lakes. |
 |4 | **End**        | End islands, End cities, Endermen, Ender dragon, and rare structures. |
 |5 | **Fun Facts**  | Survival tips 101! Learn how to: Move from one world to another, Survive each world, Use tools and potions effectively, Craft essential items |
+|6 | **Coordinates Homepage**  | Another introduction to the three dimensions. From here, visitors can navigate to where they can save their coordinates. |
+|7 | **Coordinates Saved Page**  | Saved coordinates of builds or biomes that players want to save. |
+|8 | **Coordinates Form Page**  | Here, visitors can input the information of the coordinates of a build or biome here. |
 
 ---
 
@@ -32,6 +35,10 @@ Explore biomes, buildings, mobs, and materials from each dimension while learnin
 - **Random Biome Generator**: A button that displays a random biome from any of the three worlds (Overworld, Nether, End).  
 - **Optional Feature**: Collapsible info boxes for mobs or structures to keep pages neat and readable.  
 
+---
+
+## HTML Form Incorporation
+The Html form will require the user to input different types of information about the coordinates of a biome or build of their choice. Here, it will record all of the saved coordinates throughout their world/s.
 ---
 
 ## Wireframe/Mockup
@@ -49,8 +56,16 @@ Explore biomes, buildings, mobs, and materials from each dimension while learnin
 
 ### 💡 Content Page 1 - Fun Facts
 ![Fun Facts Wireframe](./images/FunFacts.png)
-### Coordinates Page - Saving coordinates
-![Wait lang ah]()
+
+### Coordinates Page - Home Page
+![Saving Coordinates Home page](./images/Coords%20home%20page.png)
+
+### Coordinates Page - Saved Page
+![Saving Coordinates Home page](./images/Saved%20Coordinates.png)
+
+### Coordinates Page - Form Page
+![Saving Coordinates Home page](./images/Saving%20Coordinates.png)
+
 ---
 
 ## Footer

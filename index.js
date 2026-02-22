@@ -1,12 +1,12 @@
 const portals = document.querySelectorAll(".portal");
 
 portals.forEach(portal => {
-    portal.addEventListener("mouseover", () => {
-        portal.src = portal.dataset.hover;
-    });
-    portal.addEventListener("mouseout", () => {
-        portal.src = portal.dataset.original;
-    });
+  portal.addEventListener("mouseover", () => {
+    portal.src = portal.dataset.hover;
+  });
+  portal.addEventListener("mouseout", () => {
+    portal.src = portal.dataset.original;
+  });
 });
 
 /* ================= COORDINATE SYSTEM ================= */
@@ -14,20 +14,19 @@ portals.forEach(portal => {
 // save form
 const form = document.getElementById("coordForm");
 
-if(form){
-form.addEventListener("submit", function(e){
+if (form) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const title = document.getElementById("title").value;
     const dimension = document.querySelector('input[name="dimension"]:checked')?.value;
-    const type = document.querySelector('input[name="type"]:checked')?.value;
-    const which = document.getElementById("which").value;
+    const description = document.querySelector('input[name="type"]:checked')?.value;
     const x = document.getElementById("x").value;
     const y = document.getElementById("y").value;
     const z = document.getElementById("z").value;
 
     const entry = {
-        title, dimension, type, which, x, y, z
+      title, dimension, description, x, y, z
     };
 
     let saved = JSON.parse(localStorage.getItem("minecraftCoords")) || [];
@@ -37,30 +36,30 @@ form.addEventListener("submit", function(e){
 
     alert("Coordinate Saved!");
     form.reset();
-});
+  });
 }
 
 // show saved
-function showSaved(){
+function showSaved() {
 
-    const container = document.getElementById("savedList");
-    container.innerHTML = "<h3>Saved Coordinates:</h3>";
+  const container = document.getElementById("savedList");
+  container.innerHTML = "<h3>Saved Coordinates:</h3>";
 
-    let saved = JSON.parse(localStorage.getItem("minecraftCoords")) || [];
+  let saved = JSON.parse(localStorage.getItem("minecraftCoords")) || [];
 
-    saved.forEach(item=>{
-        container.innerHTML += `
+  saved.forEach(item => {
+    container.innerHTML += `
         <p>
-        ${item.title} — ${item.dimension} — ${item.type} (${item.which}) → 
+        ${item.title} — ${item.dimension} — ${item.description} → 
         X:${item.x} Y:${item.y} Z:${item.z}
         </p>
         `;
-    });
+  });
 }
 
 // clear form
-function clearForm(){
-    document.getElementById("coordForm").reset();
+function clearForm() {
+  document.getElementById("coordForm").reset();
 }
 
 // SAVE username
@@ -92,12 +91,11 @@ window.addEventListener("DOMContentLoaded", () => {
     const username = document.getElementById("username").value.trim();
     const title = document.getElementById("title").value.trim();
     const dimension = document.getElementById("dimension").value.trim();
-    const type = document.getElementById("type").value.trim();
-    const which = document.getElementById("which").value.trim();
+    const description = document.getElementById("description").value.trim();
     const coords = document.getElementById("coords").value.trim();
     const imgInput = document.getElementById("image");
 
-    if (!username || !title || !dimension || !type || !which || !coords) {
+    if (!username || !title || !dimension || !description || !coords) {
       alert("Please fill in all fields before saving!");
       return;
     }
@@ -118,8 +116,7 @@ window.addEventListener("DOMContentLoaded", () => {
         username,
         title,
         dimension,
-        type,
-        which,
+        description,
         coords,
         imgSrc
       });
