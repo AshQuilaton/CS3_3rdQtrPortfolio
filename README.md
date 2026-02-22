@@ -38,7 +38,7 @@ Explore biomes, buildings, mobs, and materials from each dimension while learnin
 ---
 
 ## HTML Form Incorporation
-The Html form will require the user to input different types of information about the coordinates of a biome or build of their choice. Here, it will record all of the saved coordinates throughout their world/s.
+The Html form will require the user to input different types of information about the coordinates of a biome or build of their choice. Here, it will record all of the saved coordinates throughout their world.
 ---
 
 ## Wireframe/Mockup
